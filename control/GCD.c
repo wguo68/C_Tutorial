@@ -21,3 +21,20 @@ void main(){
 	   printf("GCD is %d\n",m);
 	}
 }
+
+int GCD(int m, int n){
+	while (n){
+		int k = m%n;
+		m = n; n = k;
+	}
+	return m
+}
+void main(){
+	int x, y;
+	while (1){
+		scanf("%d %d", &x, &y);
+		
+		printf("GCD is %d\n", GCD(x,y));
+	}
+}
+
