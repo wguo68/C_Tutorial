@@ -8,7 +8,8 @@ void main(){
     number = 1+100.0*(rand()/RAND_MAX);
     while(count<7){
         printf("Enter a guess between 1 and 100 : \n");
-        //Your code
+        //Your code here
+        //...
         count++;
     }
     if(count==7)
