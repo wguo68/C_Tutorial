@@ -9,6 +9,7 @@ void main(){
     //printf("%d\n",number);
     while(count<7){
         printf("Enter your guess:\n");
+        // Your code here ...
     }
     if(count==7)
     	 printf("You failed to guess!\n");
