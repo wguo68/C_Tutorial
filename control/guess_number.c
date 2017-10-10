@@ -4,13 +4,10 @@
 #include <ctype.h>
 void main(){
     int number,guess,count = 0;
-    srand((int)(time(0)));
-    number = 1+100.0*(rand()/RAND_MAX);
+    srand( (unsigned)time( NULL ) ); rand();    
+    number = 1+(int)(100.0*rand()/(RAND_MAX+0.1));
+    //printf("%d\n",number);
     while(count<7){
-        printf("Enter a guess between 1 and 100 : \n");
-        //Your code here
-        //...
-        count++;
     }
     if(count==7)
     	 printf("You failed to guess!\n");
