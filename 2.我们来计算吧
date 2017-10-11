@@ -9,10 +9,10 @@
 
 void main()
 {
-    int    angle_degree;
-    double angle_radian, pi, value;
+    int    angle_degree;    /*int 是整型，说明变量angle_degree是一个整数*/
+    double angle_radian, pi, value;   /*double 是双精度实数类型，说明变量angle_radian, pi, value是实数*/
 
-       /* 打印表头 */
+    /* 打印表头 */
     printf ("\nCompute a table of the sine function\n\n");
 
         /* 得到圆周率PI的值 */
