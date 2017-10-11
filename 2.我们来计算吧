@@ -51,14 +51,22 @@ void main()
          int a;
          int b=3; /*也可以在定义变量时用一个初始化式（如这里的=3）给变量一个初始值*/
          int a=3,b,c=2;
-    可以看到，变量名是可以任意定义的，但一般要具有可读性，有的编译器可能限制变量名的最大长度。
- 每个变量都具有一定的类型，类型规定了一个变量在内存里占用多大空间，也规定了对这种类型的变量能进行什么样的操作（运算），当然也规定了该类型变量的取值范围。C程序有下面的一些常用类型：
+     
+   每个变量都具有一定的类型，类型规定了一个变量在内存里占用多大空间，也规定了对这种类型的变量能进行什么样的操作（运算），当然也规定了该类型变量的取值范围。C程序有下面的一些常用类型：
 　　　　int    -> integer variable(整型变量，表示整数，一般占4个字节)
 　　　　short  -> short integer (短整型，一般占2个字节)
 　　　　long   -> long integer (长整型，一般占6或8个字节)
 　　　　float  -> single precision real (floating point) variable(单精度实数（浮点类型），一般占4个字节)
 　　　　double -> double precision real (floating point) variable (双精度实数（浮点类型），一般占8个字节)
 　　　　char   -> character variable (single byte) (字符型（单字节)）
+
+    可以看到，变量名是可以任意定义的，可以是一个字母或多个字母、数字、下划线等，但第一个字符只能是字母或下划线。如
+      double Pi;
+      float _angle;
+      int 3angle; /*错，第一个字符不是字母或下划线*/
+    
+    
+    变量名要具有可读性，以方便阅读理解这个程序，有的编译器可能限制变量名的最大长度。
 
 3)　printf 函数 可以打印 int, float ,即字符串等变量或常量。其函数格式大致如下：
 　　　　　printf( "format", variables );
