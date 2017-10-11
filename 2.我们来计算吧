@@ -68,3 +68,16 @@ void main()
 　　　%c        character(字符)
 　　　\n \t     换行或制表符
 　　　\g    终端上响铃
+
+
+ 4） 和printf向屏幕输出数据相对的是从键盘输入数据的scanf函数，它们都是C语言的标准库函数（即已经实现好的函数，我们只要调用就行）。例如：
+      #include <stdio.h>   /* stdio.h 中定义了输出输出相关的函数 */
+      void main(){
+         int a; float b;
+         scanf(“%d %f”, &a, &b); /* 从键盘输入一个整数和一个实数 */
+         printf(“%d %f”, a, b);  /* 向屏幕输出一个整数和一个实数*/
+      }
+
+ 
+ 
+ 
