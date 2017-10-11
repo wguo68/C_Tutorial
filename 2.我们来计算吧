@@ -46,22 +46,25 @@ void main()
 2） 变量的类型
 可以看到，变量名是可以任意定义的，但一般要具有可读性，有的编译器可能限制变量名的最大长度。
 每个变量都具有一定的类型，类型规定了一个变量在内存里占用多大空间，也规定了对这种类型的变量能进行什么样的操作（运算），当然也规定了该类型变量的取值范围。C程序有下面的一些常用类型：
-　　　　int    -> integer variable
-　　　　short  -> short integer
-　　　　long   -> long integer
-　　　　float  -> single precision real (floating point) variable
-　　　　double -> double precision real (floating point) variable
-　　　　char   -> character variable (single byte)
+　　　　int    -> integer variable(整型变量，表示整数，一般占4个字节)
+　　　　short  -> short integer (短整型，一般占2个字节)
+　　　　long   -> long integer (长整型，一般占6或8个字节)
+　　　　float  -> single precision real (floating point) variable(单精度实数（浮点类型），一般占4个字节)
+　　　　double -> double precision real (floating point) variable (双精度实数（浮点类型），一般占8个字节)
+　　　　char   -> character variable (single byte) (字符型（单字节)）
 
 3)　printf 函数 可以打印 int, float ,即字符串等变量或常量。其函数格式大致如下：
 　　　　　printf( "format", variables );
 
-　其中"format"规定了转换的规范，而　 variables则是一些要按照这格式输出的变量。如：
+　其中"format"称为格式串，可包含下列三种字符类型：
+   1）一般字符，将会直接输出
+   2）ASCII 控制字符，如\t、\n 等有特定含义
+   3）格式转换字符 . 如 %f 、%d. 定义后面输出项（variables）的类型，而variables则是一些要按照这格式输出的变量。如：
 
-　　　%.nd    integer (optional n = number of columns; if 0, pad with zeroes)
-　　　%m.nf    float or double (optional m = number of columns,
-                   n = number of decimal places)
-　　　%ns    string (optional n = number of columns)
-　　　%c        character
-　　　\n \t     to introduce new line or tab
-　　　\g    ring the bell (``beep'') on the terminal
+　　　%.nd    integer (可选的n说明输出整数数字占据的列数)
+　　　%m.nf    float or double (可选的m = 占据的列数,
+                   n = 精度的位数)
+　　　%ns    string (可选的 n = 占据的列数s)
+　　　%c        character(字符)
+　　　\n \t     换行或制表符
+　　　\g    终端上响铃
