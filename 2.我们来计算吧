@@ -69,7 +69,7 @@ void main()
       double Pi;
       float _angle;
       int 3angle; /*错，第一个字符不是字母或下划线*/
-      int if; /*错：变量名不是是C语言本身的关键字，如if、int、include、return、...*/ 
+      int if; /*错：变量名不能是C语言本身的关键字，如if、int、include、return、...*/ 
     
     
     变量名要具有可读性，以方便阅读理解这个程序，有的编译器可能限制变量名的最大长度。
