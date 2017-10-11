@@ -1,0 +1,67 @@
+下面的程序计算　０　到３６０度之间的　sin　函数值：
+
+                /*   sine 函数表             
+                    Michel Vallieres     
+                    Written: Winter 1995    */
+
+#include < stdio.h>
+#include < math.h>
+
+void main()
+{
+    int    angle_degree;
+    double angle_radian, pi, value;
+
+       /* 打印表头 */
+    printf ("\nCompute a table of the sine function\n\n");
+
+        /* 得到圆周率PI的值 */
+        /*或者可以用pi = M_PI, 这个 M_PI 常量定义在头文件math.h中     */
+    pi = 4.0*atan(1.0);
+    printf ( " Value of PI = %f \n\n", pi );
+
+    printf ( " angle     Sine \n" );
+
+    angle_degree=0;            /* 初始化角度值为0   */
+
+    /* scan over angle  */
+    while (  angle_degree <= 360 )    /*  循环执行循环体（while程序块）直到angle_degree > 360 */
+    {
+       angle_radian = pi * angle_degree/180.0 ;
+       value = sin(angle_radian);
+       printf ( " %3d      %f \n ", angle_degree, value );
+
+       angle_degree = angle_degree + 10;            /* 增量    */
+    }
+}
+
+编译该程序：
+　　　　
+　　　gcc sine.c -lm
+ 执行该程序：　
+　　　　. /a.out
+说明：
+ 1)  /*  和 */ 之间的文字都属程序注释，不是程序语句，仅仅是为了说明这个程序，帮助自己对自己做的工作做一下注释或帮助别人理解程序的代码。
+
+2） 变量的类型
+可以看到，变量名是可以任意定义的，但一般要具有可读性，有的编译器可能限制变量名的最大长度。
+每个变量都具有一定的类型，类型规定了一个变量在内存里占用多大空间，也规定了对这种类型的变量能进行什么样的操作（运算），当然也规定了该类型变量的取值范围。C程序有下面的一些常用类型：
+　　　　int    -> integer variable
+　　　　short  -> short integer
+　　　　long   -> long integer
+　　　　float  -> single precision real (floating point) variable
+　　　　double -> double precision real (floating point) variable
+　　　　char   -> character variable (single byte)
+
+3)　printf 函数 可以打印 int, float ,即字符串等变量或常量。其函数格式大致如下：
+　　　　　printf( "format", variables );
+
+　其中"format"规定了转换的规范，而　 variables则是一些要按照这格式输出的变量。如：
+
+　　　%.nd    integer (optional n = number of columns; if 0, pad with zeroes)
+　　　%m.nf    float or double (optional m = number of columns,
+                   n = number of decimal places)
+　　　%ns    string (optional n = number of columns)
+　　　%c        character
+　　　\n \t     to introduce new line or tab
+　　　\g    ring the bell (``beep'') on the terminal
