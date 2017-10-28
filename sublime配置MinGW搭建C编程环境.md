@@ -1,4 +1,4 @@
-## sublime配置MinGW搭建C/C++编程环境
+## sublime配置MinGW搭建C/C++编程环境,并解决控制台汉字输出乱码问题
 
 当安装好MinGW和sublime text后，执行下面2个动作：
 
