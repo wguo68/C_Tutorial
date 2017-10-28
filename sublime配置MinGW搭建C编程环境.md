@@ -4,7 +4,7 @@
 
 1. 按照菜单Tools——>Build System ——>New Build System新建一个“Build System”，其中输出下面内容：
 
-
+```
 {
   "cmd": ["gcc","-fexec-charset=GBK", "${file}", "-o","${file_path}/${file_base_name}"],
   "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:?(.*)$",
@@ -19,6 +19,7 @@
     }
   ]
 }
+```
 
 将该“Build System”保存为比如“C.sublime-build”到“.../Packages/User/”路径下：Packages/User/C.sublime-build
 
